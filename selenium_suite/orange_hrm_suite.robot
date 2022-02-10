@@ -8,7 +8,12 @@ TC1 Valid Login
     Input Text    id=txtUsername    Admin
     Input Password    id=txtPassword    admin123
     Click Element    name=Submit
-
+    ${url}  Get Location
+    Log To Console    ${url}
+    Click Element    id=welcome
+    Sleep    5s
+    Click Element    link=Logout
+    Close Browser
 
 
 
