@@ -1,45 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220209 10:11:36.976" rpa="false" schemaversion="2">
-<suite id="s1" name="Orange Hrm Suite" source="C:\Users\yamini\PycharmProjects\Robotics\selenium_suite\orange_hrm_suite.robot">
-<test id="s1-t1" name="TC1 Valid Login">
-<kw name="Append To Environment Variable" library="OperatingSystem">
-<arg>path</arg>
-<arg>${EXECDIR}\\drivers</arg>
-<doc>Appends given ``values`` to environment variable ``name``.</doc>
-<msg timestamp="20220209 10:11:38.507" level="INFO">Environment variable 'path' set to value 'C:\Users\yamini\PycharmProjects\Robotics\venv\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\yamini\AppData\Local\Programs\Python\Launcher\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Users\yamini\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\yamini\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\yamini\AppData\Local\Programs\Python\Python310\;C:\Program Files\Java\jdk-17.0.1\bin;;C:\Users\yamini\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2021.3.2\bin;;C:\Users\yamini\PycharmProjects\Robotics\selenium_suite\drivers'.</msg>
-<status status="PASS" starttime="20220209 10:11:38.507" endtime="20220209 10:11:38.507"/>
-</kw>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 12:10:52.082" rpa="false" schemaversion="2">
+<suite id="s1" name="Alert Suit" source="C:\Users\yamini\PycharmProjects\Robotics\selenium_suite\alert_suit.robot">
+<test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
 <arg>browser=chrome</arg>
+<arg>executable_path=${EXECDIR}${/}drivers${/}chromedriver</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220209 10:11:38.507" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<msg timestamp="20220209 10:11:38.694" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20220209 10:11:38.726" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+<msg timestamp="20220210 12:10:52.666" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20220210 12:10:52.690" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220210 12:10:52.690" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
 </msg>
-<status status="FAIL" starttime="20220209 10:11:38.507" endtime="20220209 10:11:38.726"/>
+<status status="FAIL" starttime="20220210 12:10:52.658" endtime="20220210 12:10:52.698"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=txtUsername</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 10:11:38.726" endtime="20220209 10:11:38.726"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>id=txtPassword</arg>
-<arg>admin123</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 10:11:38.726" endtime="20220209 10:11:38.726"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>name=Submit</arg>
+<arg>xpath=//img[@alt='Go']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220209 10:11:38.726" endtime="20220209 10:11:38.726"/>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
 </kw>
-<status status="FAIL" starttime="20220209 10:11:38.507" endtime="20220209 10:11:38.726">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${alert_tex}</var>
+<arg>action=ACCEPT</arg>
+<arg>timeout=20s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${alert_text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220210 12:10:52.698" endtime="20220210 12:10:52.698"/>
+</kw>
+<status status="FAIL" starttime="20220210 12:10:52.658" endtime="20220210 12:10:52.698">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
 </status>
 </test>
-<status status="FAIL" starttime="20220209 10:11:36.991" endtime="20220209 10:11:38.741"/>
+<status status="FAIL" starttime="20220210 12:10:52.082" endtime="20220210 12:10:52.706"/>
 </suite>
 <statistics>
 <total>
@@ -48,7 +55,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Orange Hrm Suite">Orange Hrm Suite</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Alert Suit">Alert Suit</stat>
 </suite>
 </statistics>
 <errors>
